@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicio De Transporte</title>
+    <link rel="stylesheet" href="index.css">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/d99f48a841.js" crossorigin="anonymous"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Dancing+Script&family=Lora&display=swap"
+        rel="stylesheet">
+    <!-- Swiper JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Open Graph -->
+    <meta property="og:title" content="Turismo Puerto Vallarta">
+    <meta property="og:description" content="Servicio de Tours y transporte en puerto Vallarta Mexico">
+    <meta property="og:image" content="/Imagenes/Turistico/sean-oulashin-KMn4VEeEPR8-unsplash.jpg">
+    <meta property="og:image:alt" content="alt si la imagen no carga">
+</head>
+<body id="inicio">
+    <header>
+        <span class="logo">Logo</span>
+        <button aria-controls="navigation" aria-expanded="false" class="bars-menu-btn"></button>
+        <nav class="navbar">
+            <button aria-controls="navigation" aria-expanded="true" class="close-menu-btn"></button>
+            <ul id="navigation">
+                <li><a href="#inicio">Inicio</a></li>
+                <li id="transportes">
+                    <div role="none" class="flex justify-center place-items-center gap-2">
+                        <span aria-controls="tipo-transportes" aria >Transporte</span>
+                        <img src="./Imagenes/SVG/caret-down-solid.svg" alt="Flecha abajo" role="none" class="smallest-w-icon">
+                    </div>
+                    <ul class="subnavigation" id="tipo-transportes"
+                    aria-expanded="false">
+                        <li aria-hidden="true"><a href="#local">Local</a></li>
+                        <li aria-hidden="true"><a href="#foraneo">Foraneo</a></li>
+                    </ul>
+                </li>
+                <li><a href="#tours">Tours</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="hero">
+
+        <section class="swiper" id="main-carrusel">
+            <h1 class="title ribbon">Visita puerto vallarta</h1>
+            <div class="swiper-wrapper">
+                <article class="swiper-slide">
+                    <img src="Imagenes/Turistico/filip-gielda-QKrLdkoYDrc-unsplash.jpg" />
+                    <div class="swiper-content">
+                        <strong>Cultura</strong>
+                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates explicabo tempore facere odio quidem nihil natus laudantium, sapiente assumenda qui temporibus non pariatur esse delectus accusamus, optio itaque voluptatum dolores.</span>
+                    </div>
+                </article>
+                <article class="swiper-slide">
+                    <img src="Imagenes/Turistico/josie-josie-ybz7WB39uB4-unsplash.jpg" />
+                    <div class="swiper-content">
+                        <strong>Playas</strong>
+                        <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus nostrum quae fugiat distinctio unde mollitia quaerat ratione ut, illum perspiciatis ea voluptatem, quos aspernatur nobis? Explicabo eius praesentium commodi tempore.</span>
+                    </div>
+                </article>
+                <article class="swiper-slide">
+                    <img src="Imagenes/Turistico/roman-lopez-XT2qRE_T1Bs-unsplash.jpg" />
+                    <div class="swiper-content">
+                        <strong>Parques naturales</strong>
+                        <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam suscipit ducimus aliquid, facere perspiciatis illum cumque, sapiente tenetur deleniti culpa sequi. Accusantium id perspiciatis sunt, expedita obcaecati ipsam natus incidunt?</span>
+                    </div>
+                </article>
+                <article class="swiper-slide">
+                    <img src="Imagenes/Turistico/sean-oulashin-KMn4VEeEPR8-unsplash.jpg" />
+                    <div class="swiper-content">
+                        <strong>Atracciones</strong>
+                        <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum voluptas explicabo quibusdam dolorem quia labore, tenetur fugiat praesentium expedita soluta sequi id asperiores rem quos, aspernatur velit in a odio.</span>
+                    </div>
+                </article>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </section>
+    </main>
+    <section id="foraneo" class="bottom">
+        <h2>Conoce las diferentes regiones y municipos de Jalisco</h2>
+        <ul class="flex-container-wrap" id="foraneo-list">
+            <li>
+                <figure>
+                    <img loading="lazy" src="./Imagenes/Locales/hotel.jpg" alt="">
+                    <figcaption>
+                        <span>Guadalajara</span>
+                        <img src="./Imagenes/SVG/icon-location.svg" alt="">
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <img loading="lazy" src="./Imagenes/Locales/hotel.jpg" alt="">
+                    <figcaption>
+                        <span>Mascota</span>
+                        <img src="./Imagenes/SVG/icon-location.svg" alt="">
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <img loading="lazy" src="./imagenes/locales/hotel.jpg" alt="">
+                    <figcaption>
+                        <span>San Sebastian</span>
+                        <img src="./Imagenes/SVG/icon-location.svg" alt="">
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <img loading="lazy" src="./imagenes/locales/hotel.jpg" alt="">
+                    <figcaption>
+                        <span>Melaque</span>
+                        <img src="./Imagenes/SVG/icon-location.svg" alt="">
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <img loading="lazy" src="./imagenes/locales/hotel.jpg" alt="">
+                    <figcaption>
+                        <span>Barra de navidad</span>
+                        <img src="./Imagenes/SVG/icon-location.svg" alt="">
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <img loading="lazy" src="./imagenes/locales/hotel.jpg" alt="">
+                    <figcaption>
+                        <span>Tepic</span>
+                        <img src="./Imagenes/SVG/icon-location.svg" alt="">
+                    </figcaption>
+                </figure>
+            </li>
+        </ul>
+    </section>
+    <section id="local" class="top">
+            <div class="content">
+                
+                <h2>Sitios Locales</h2>
+                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta optio cum quae, amet maiores nam
+                    fuga enim deleniti sint assumenda modi corrupti fugit veniam rerum eum, perspiciatis minus, natus facere?</p>
+                <div class="flex-container-wrap">
+                    <img class="sml-icon" src="./Imagenes/SVG/cafe.svg" alt="">
+                    <img class="sml-icon" src="./Imagenes/SVG/hotel.svg" alt="">
+                    <img class="sml-icon" src="./Imagenes/SVG/restaurant.svg" alt="">
+                </div>
+            </div>
+            
+    </section>
+    <section id="tours">
+        <h2>Tours</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae libero cumque possimus vel veritatis nam unde, suscipit sunt at nihil aliquid nesciunt inventore ducimus velit impedit debitis, tempore commodi error? Dolore vero laborum excepturi tenetur?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, aliquid a. Repudiandae explicabo accusantium, nostrum consequatur possimus at perferendis officia aliquam, nemo minima animi obcaecati labore, quo facere sequi! Rerum consequuntur tempora consectetur quos illo est, aperiam alias tempore ipsam, possimus animi ducimus ullam necessitatibus hic. Inventore id animi minima a laborum excepturi sint esse.</p>
+        
+    </section>
+    <section id="contacto">
+        <h2 >Contacto</h2>
+        <img class="qr-code" src="./Imagenes/qr-code.png" alt="">
+        <span class="contact-name">Roberto Figueroa</span>
+        <a href="https://wa.me/523222179393" target="_blank" class="contact-whatsapp-link">
+            <img src="Imagenes/SVG/whatsapp.svg" alt="WhatsApp Icono" class="sml-icon">
+            <span aria-label="Numero telefonico" class="contact-phone">+52 322 217 9393</span>
+        </a>
+        
+    </section>
+    
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Script -->
+    <script src="index.js"></script>
+</body>
+</html>
