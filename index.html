@@ -27,19 +27,20 @@
         <span class="logo">Logo</span>
         <button aria-controls="navigation" aria-expanded="false" class="bars-menu-btn"></button>
         <nav class="navbar">
-            <button aria-controls="navigation" aria-expanded="true" class="close-menu-btn"></button>
+            <button aria-controls="navigation" aria-expanded="true" class="close-menu-btn" aria-hidden="true"></button>
             <ul id="navigation">
                 <li><a href="#inicio">Inicio</a></li>
                 <li id="transportes">
-                    <div role="none" class="flex-center">
-                        <span aria-controls="tipo-transportes" aria >Transporte</span>
-                        <img src="./images/svg/caret-down-solid.svg" alt="Flecha abajo" role="none" class="smallest-w-icon">
+                        <button class="transporte-btn" aria-controls="tipo-transportes" aria-expanded="false">
+                            Transporte 
+                            <img src="./images/svg/caret-down-solid.svg" alt="" class="smallest-w-icon">
+                        </button>
+                    <div class="subnavigation-wrapper">
+                        <ul class="subnavigation" id="tipo-transportes">
+                            <li aria-hidden="true"><a tabindex="1" href="#local">Local</a></li>
+                            <li aria-hidden="true"><a tabindex="1" href="#foraneo">Foraneo</a></li>
+                        </ul>
                     </div>
-                    <ul class="subnavigation" id="tipo-transportes"
-                    aria-expanded="false">
-                        <li aria-hidden="true"><a href="#local">Local</a></li>
-                        <li aria-hidden="true"><a href="#foraneo">Foraneo</a></li>
-                    </ul>
                 </li>
                 <li><a href="#tours">Tours</a></li>
                 <li><a href="#contacto">Contacto</a></li>
@@ -90,7 +91,7 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta repellat in porro omnis dolores, laboriosam ratione
                 sapiente inventore laudantium quasi minus itaque expedita fuga voluptate ea ex cupiditate consequuntur consectetur
                 totam. Sint quia, facere laborum in, culpa repellendus magni dicta a fuga natus consequatur neque.</p>
-                <span class="small-letter bold">Capacidad maxima para 16 personas.</span>
+                <span class="small-letter bold">* Capacidad maxima para 16 personas.</span>
         </div>
         <ul class="flex-container-wrap" id="foraneo-list">
             <li>

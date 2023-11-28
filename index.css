@@ -27,9 +27,12 @@ html {
     --foraneo-picture-legend_bg-color:#000;
     --foraneo-picture-legend_font-folor:#fff;
     --body_font-size:1.6rem;
+    --_Header-list-vertical-padding: .6rem;
+    --_Header-list-horizontal-padding: .4rem;
     }
 body {
     font-size: 1.6rem;
+    overflow-x: hidden;
 }
 
 /* Header */
@@ -66,11 +69,16 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border-radius: 8px;
+}
+#navigation > li > a {
+    padding: var(--_Header-list-vertical-padding) var(--_Header-list-horizontal-padding);
+    
 }
 #navigation > li:hover {
     background-color: #000;
 }
-#navigation > li .subnavigation {
+#transportes > .subnavigation-wrapper {
     background-color: hsl(191, 83%, 33%);
     position: absolute;
     width: 100%;
@@ -79,8 +87,22 @@ header {
     transform: translateY(50%);
     display: none;
 }
-.subnavigation > *:hover {
+#transportes > .subnavigation-wrapper.open {
+    display: grid;
+    z-index: 999;
+}
+.subnavigation-wrapper > ul > li:hover {
     background-color: hsl(191, 83%, 43%);
+}
+.transporte-btn {
+    background-color: transparent;
+    border: none;
+    color: var(--_Header-font-color);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.2rem 0.4rem;
+    border-radius: .4rem .6rem;
 }
 /* Menu btns */
 .bars-menu-btn,
@@ -90,7 +112,9 @@ header {
     background-color: #000;
     aspect-ratio: 1;
     display: none;
+    cursor: pointer;
 }
+
 .bars-menu-btn {
     background: url('images/svg/bars-solid.svg') no-repeat center/cover;
 }
@@ -174,7 +198,6 @@ header {
     grid-column: 1/2;
     padding: 2rem 1rem;
     font-size: 2.2rem;
-    text-align: end;
 }
 #foraneo-list{
     width: 100%;
@@ -303,6 +326,7 @@ a:visited {
 }
 .smallest-w-icon {
     width: 1rem;
+    object-fit: contain;
     height: 100%;
 }
 
@@ -312,4 +336,106 @@ a:visited {
 }
 .bold {
     font-weight: bold;
+}
+
+/* Breakpoints */
+
+@media screen and (max-width: 866px) {
+    html {
+        font-size: 52%;
+    }
+    .bars-menu-btn,
+    .close-menu-btn {
+        display: block;
+        border: none;
+    }
+    
+    .navbar {
+        z-index: 999;
+        top: 0;
+        position: fixed;
+        height: 100vh;
+        background: var(--_Header-bg-color);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        opacity: 0;
+        max-width: 250px;
+        right: 0;
+        transition: transform 400ms ease;
+        pointer-events: none;
+        transform: translateX(100%);
+    }
+    .navbar.open:before {
+        content: '';
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.475);
+        width: 100vw;
+        height: 100vh;
+        left: 0;
+        top: 0;
+        transform: translateX(-100%);
+        z-index: 9999;
+    }
+    .close-menu-btn {
+        position: absolute;
+        right: 2rem;
+        top: 2.5rem;
+    }
+    
+    #navigation {
+        flex-direction: column;
+        padding: 10rem 0;
+        gap:4rem !important;
+    }
+    .bars-menu-btn.clicked {
+        display: none;
+    }
+    .navbar.open {
+        opacity: 1 !important;
+        transform: translate(0) !important;
+        pointer-events: all;
+    }
+    #transportes > .subnavigation-wrapper {
+        inset: 0;
+        position: relative;
+        transform: none;
+        text-align: center;
+        display: grid;
+        padding: 0;
+        grid-template-rows: 0fr;
+        transition: grid 300ms ease;
+    }
+    #transportes > .subnavigation-wrapper.open {
+        grid-template-rows: 1fr;
+        padding: 0.8rem;
+    }
+
+    #transportes > .subnavigation-wrapper> ul {
+        overflow: hidden;
+    }
+    /* Foraneo */
+    #foraneo{
+        grid-template-columns: 1fr;
+        border: 3px solid blue;
+    }
+    #foraneo h2 {
+        grid-column: auto;
+    }
+
+    #foraneo-description {
+        grid-column: auto;
+    }
+    #foraneo-list {
+        width: 100%;
+        gap: 0.85rem;
+        overflow-y: auto;
+        max-height: none;
+        position: relative;
+        border: 3px solid brown;
+    }
+    #foraneo-list > li {
+        margin: unset;
+    }
 }
