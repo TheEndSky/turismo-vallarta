@@ -41,11 +41,17 @@ function hideNavBar() {
     navbar.classList.remove('open')
     barsMenuBtn.classList.remove('clicked')
     subMenuList.classList.remove('open')
+
+    subEls.forEach(el => {
+        const link = el.querySelector('a')
+        link.tabIndex = -1
+        el.setAttribute('aria-hidden', false)
+        transporteSubMenuBtn.setAttribute('aria-expanded',false)
+    })
 }
 
 barsMenuBtn.addEventListener('click', () =>{
     showNavBar()
-    
 })
 closeMenuBtn.addEventListener('click', () => {
     hideNavBar()
@@ -57,11 +63,32 @@ navbar.addEventListener('click',(e) => {
 })
 transporteSubMenuBtn.addEventListener('click', () => {
     subMenuList.classList.toggle('open')
-    console.log(subEls)
-    transporteSubMenuBtn.setAttribute('aria-expanded',true)
+    subEls.forEach(el => {
+        const link = el.querySelector('a')
+        if (subMenuList.classList.contains('open')) {
+            link.tabIndex = 0
+            el.setAttribute('aria-hidden', false)
+            transporteSubMenuBtn.setAttribute('aria-expanded',true)
+        }
+        else {
+            link.tabIndex = -1
+            el.setAttribute('aria-hidden', false)
+            transporteSubMenuBtn.setAttribute('aria-expanded',false)
+        }
+    } )
 })
 
-
+subEls.forEach(li => {
+    const link = li.closest('a')
+    li.addEventListener('click',() => {
+        link.tabIndex = -1
+        el.setAttribute('aria-hidden', false)
+        transporteSubMenuBtn.setAttribute('aria-expanded',false)
+    })
+})
 window.addEventListener('keydown', (e) => {
+    if (navbar.classList.contains('open') && e.key === 'Escape') hideNavBar() 
+})
+window.addEventListener('click', (e) => {
     if (navbar.classList.contains('open') && e.key === 'Escape') hideNavBar() 
 })
